@@ -1,0 +1,95 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /Users/wangdian/Documents/myCode/mydumper_personal_learning
+CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- The C compiler identification is AppleClang 10.0.1.10010046
+-- The CXX compiler identification is AppleClang 10.0.1.10010046
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Library/Developer/CommandLineTools/usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Using mysql-config: /usr/local/bin/mysql_config
+-- Found MySQL: /usr/local/Cellar/mysql/8.0.26/include/mysql, /usr/local/Cellar/mysql/8.0.26/lib/libmysqlclient.dylib;/usr/lib/libz.dylib;/usr/local/lib/libzstd.dylib;/usr/lib/libssl.dylib;/usr/lib/libcrypto.dylib;/usr/lib/libresolv.dylib
+-- Found ZLIB: /usr/lib/libz.dylib (found version "1.2.11") 
+CMake Warning (dev) at /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.20/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+  The package name passed to `find_package_handle_standard_args` (PkgConfig)
+  does not match the name of the calling package (GLIB2).  This can lead to
+  problems in calling code that expects `find_package` result variables
+  (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.20/Modules/FindPkgConfig.cmake:70 (find_package_handle_standard_args)
+  cmake/modules/FindGLIB2.cmake:9 (include)
+  CMakeLists.txt:10 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Could NOT find PkgConfig (missing: PKG_CONFIG_EXECUTABLE) 
+-- Checking for one of the modules 'glib-2.0'
+CMake Error at /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.20/Modules/FindPkgConfig.cmake:843 (message):
+  None of the required 'glib-2.0' found
+Call Stack (most recent call first):
+  cmake/modules/FindGLIB2.cmake:10 (pkg_search_module)
+  CMakeLists.txt:10 (find_package)
+
+
+-- Checking for one of the modules 'gthread-2.0'
+CMake Error at /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.20/Modules/FindPkgConfig.cmake:843 (message):
+  None of the required 'gthread-2.0' found
+Call Stack (most recent call first):
+  cmake/modules/FindGLIB2.cmake:11 (pkg_search_module)
+  CMakeLists.txt:10 (find_package)
+
+
+-- Checking for one of the modules 'gio-2.0'
+CMake Error at /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.20/Modules/FindPkgConfig.cmake:843 (message):
+  None of the required 'gio-2.0' found
+Call Stack (most recent call first):
+  cmake/modules/FindGLIB2.cmake:12 (pkg_search_module)
+  CMakeLists.txt:10 (find_package)
+
+
+-- Checking for one of the modules 'gobject-2.0'
+CMake Error at /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.20/Modules/FindPkgConfig.cmake:843 (message):
+  None of the required 'gobject-2.0' found
+Call Stack (most recent call first):
+  cmake/modules/FindGLIB2.cmake:13 (pkg_search_module)
+  CMakeLists.txt:10 (find_package)
+
+
+-- Could NOT find PkgConfig (missing: PKG_CONFIG_EXECUTABLE) 
+CMake Error at /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.20/Modules/FindPkgConfig.cmake:612 (message):
+  pkg-config tool not found
+Call Stack (most recent call first):
+  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.20/Modules/FindPkgConfig.cmake:778 (_pkg_check_modules_internal)
+  cmake/modules/FindPCRE.cmake:25 (pkg_check_modules)
+  CMakeLists.txt:11 (find_package)
+
+
+-- Found PCRE: /usr/local/include  
+
+CMake Warning at docs/CMakeLists.txt:9 (message):
+  Unable to find Sphinx documentation generator
+
+
+-- ------------------------------------------------
+-- MYSQL_CONFIG = /usr/local/bin/mysql_config
+-- CMAKE_INSTALL_PREFIX = /usr/local
+-- BUILD_DOCS = ON
+-- WITH_BINLOG = OFF
+-- WITH_ZSTD = OFF
+-- RUN_CPPCHECK = OFF
+-- Change a values with: cmake -D<Variable>=<Value>
+-- ------------------------------------------------
+-- 
+-- Configuring incomplete, errors occurred!
+See also "/Users/wangdian/Documents/myCode/mydumper_personal_learning/cmake-build-debug/CMakeFiles/CMakeOutput.log".

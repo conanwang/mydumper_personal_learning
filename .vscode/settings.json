@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "server_detect.h": "c",
+        "unistd.h": "c",
+        "glib.h": "c",
+        "garray.h": "c",
+        "string.h": "c",
+        "gasyncqueue.h": "c",
+        "galloca.h": "c",
+        "gtypes.h": "c",
+        "giochannel.h": "c",
+        "pthread.h": "c",
+        "stdio.h": "c"
+    },
+    "editor.suggest.snippetsPreventQuickSuggestions": false
+}
