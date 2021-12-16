@@ -266,7 +266,7 @@ static GOptionEntry entries[] = {
     {"tidb-snapshot", 'z', 0, G_OPTION_ARG_STRING, &tidb_snapshot,
      "Snapshot to use for TiDB", NULL},
     {"load-data", 0, 0, G_OPTION_ARG_NONE, &load_data,
-     "", NULL},
+     "output csv format file", NULL},
     {"fields-terminated-by", 0, 0, G_OPTION_ARG_STRING, &fields_terminated_by_ld, "", NULL},
     {"fields-enclosed-by", 0, 0, G_OPTION_ARG_STRING, &fields_enclosed_by_ld, "", NULL},
     {"fields-escaped-by", 0, 0, G_OPTION_ARG_STRING, &fields_escaped_by,
