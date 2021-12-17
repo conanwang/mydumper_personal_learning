@@ -1941,6 +1941,7 @@ void start_dump(MYSQL *conn)
                    "consistent: %s",
                    mysql_error(conn));
         errors++;
+        exit(EXIT_FAILURE);   // 如果无法获取全局锁，提出程序，避免产生不一样的数据备份
       }
     }
   }
