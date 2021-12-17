@@ -4375,6 +4375,7 @@ guint64 dump_table_data(MYSQL *conn, FILE *file, struct table_job *tj)
           //          g_string_append(statement_row,fields_enclosed_by);
           g_string_append(statement_row, "NULL");
         }
+        // 这里使用了mysql内置类型
         else if (fields[i].type != MYSQL_TYPE_LONG && fields[i].type != MYSQL_TYPE_LONGLONG && fields[i].type != MYSQL_TYPE_INT24 && fields[i].type != MYSQL_TYPE_SHORT)
         {
           g_string_append(statement_row, fields_enclosed_by);
