@@ -3,6 +3,7 @@ project(mydumper)
 set(VERSION 0.11.4)
 set(ARCHIVE_NAME "${CMAKE_PROJECT_NAME}-${VERSION}")
 # add by conanwang
+SET(CMAKE_BUILD_TYPE “Debug”)
 
 find_program(CCACHE_FOUND ccache)
 if(CCACHE_FOUND)
