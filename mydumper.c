@@ -57,6 +57,9 @@
 #include "logging.h"
 #include "set_verbose.h"
 #include "locale.h"
+#include <stdbool.h>
+#include <dirent.h>
+#include <string.h>
 
 char *regexstring = NULL;
 
@@ -77,6 +80,10 @@ guint statement_size = 1000000;
 guint rows_per_file = 0;
 guint chunk_filesize = 0;
 int longquery = 60;
+// add for determine dir empty
+guint checkOutputDirMode = 0;
+
+
 int longquery_retries = 0;
 int longquery_retry_interval = 60;
 int build_empty_files = 0;
@@ -167,6 +174,8 @@ static GMutex *ll_mutex = NULL;
 int errors;
 
 static GOptionEntry entries[] = {
+    {"checkOutputDirMode", 0, 0, G_OPTION_ARG_INT, &checkOutputDirMode,
+     "check OutPutDir mode, if 0, nothing to do;1, proc will exit if dir not empty; 2, proc will remove all file of dir before dump, default is 0", NULL}, 
     {"database", 'B', 0, G_OPTION_ARG_STRING, &db, "Database to dump", NULL},
     {"tables-list", 'T', 0, G_OPTION_ARG_STRING, &tables_list,
      "Comma delimited table list to dump (does not exclude regex option)",
@@ -297,6 +306,8 @@ static GOptionEntry entries[] = {
 
 struct tm tval;
 
+bool checkDirEmpty(const char * dirpath);
+void rmAllFiles(const char * dirpath);
 void dump_schema_data(MYSQL *conn, char *database, char *table, char *filename);
 void dump_triggers_data(MYSQL *conn, char *database, char *table,
                         char *filename);
@@ -1610,6 +1621,24 @@ void dump_metadata(struct db_table *dbt)
 
 void start_dump(MYSQL *conn)
 {
+  // determine backup dir
+  if (checkOutputDirMode == 0) {
+    // nothing to do
+  }
+  else if (checkOutputDirMode == 1) {
+    // if dir is not empty, exit the proc
+    if (!checkDirEmpty(output_directory)) {
+      g_critical("outputdir is not empty!");
+      exit(EXIT_FAILURE);
+    }
+  }
+  else if (checkOutputDirMode == 2) {
+    rmAllFiles(output_directory);
+  }
+  else {
+    g_critical("option --checkOutputDirMode only can be 0, 1, 2");
+  }
+
   struct configuration conf = {1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0};
   char *p;
   char *p2;
@@ -4375,11 +4404,12 @@ guint64 dump_table_data(MYSQL *conn, FILE *file, struct table_job *tj)
           //          g_string_append(statement_row,fields_enclosed_by);
           g_string_append(statement_row, "NULL");
         }
-        // 这里使用了mysql内置类型
+        // 这里使用了mysql内置类型 , MYSQL_TYPE_LONG-int, MYSQL_TYPE_LONGLONG-bigint, MYSQL_TYPE_INT24-MEDIUMINT, MYSQL_TYPE_SHORT-YEAR
+        // 非类int整形不加列包裹符
         else if (fields[i].type != MYSQL_TYPE_LONG && fields[i].type != MYSQL_TYPE_LONGLONG && fields[i].type != MYSQL_TYPE_INT24 && fields[i].type != MYSQL_TYPE_SHORT)
         {
           g_string_append(statement_row, fields_enclosed_by);
-          g_string_append(statement_row, fun_ptr(&(row[i])));
+          g_string_append(statement_row, fun_ptr(&(row[i])));  // 通过fun_ptr 函数指针返回当前这个字段的value字符串
           g_string_append(statement_row, fields_enclosed_by);
         }
         else
@@ -4564,4 +4594,60 @@ gboolean write_data(FILE *file, GString *data)
   }
 
   return TRUE;
+}
+
+// check dir is empty
+bool checkDirEmpty(const char * dirpath) {
+  DIR * dstDir = NULL;
+  struct dirent * ptr_dirent = NULL;
+  dstDir = opendir(dirpath); 
+  while (1) {
+    ptr_dirent = readdir(dstDir);
+    if (!ptr_dirent) {
+      return true;  
+    }
+    if (!strcmp(ptr_dirent->d_name, ".") || !strcmp(ptr_dirent->d_name, "..")) {
+      // nothing to do
+    }
+    else {
+      return false;
+    }
+  }
+}
+
+// remove all files of the backup dir
+void rmAllFiles(const char * dirpath) {
+  DIR * dstDir = NULL;
+  struct dirent * ptr_dirent = NULL;
+  dstDir = opendir(dirpath);
+  while (1) {
+    ptr_dirent = readdir(dstDir);
+    // if filename can't be "." or "..", begin to remove all files
+    if (ptr_dirent && (strcmp(ptr_dirent->d_name, ".") && strcmp(ptr_dirent->d_name, ".."))) {
+      GString * absFileName = g_string_new(dirpath);    // 根据备份目录路径生成一个GString 结构指针
+      // concat absolute path of filename
+      g_string_append(absFileName, "/"); 
+      g_string_append(absFileName, ptr_dirent->d_name);
+      if (!remove(absFileName->str)) {    // determine file removed success, if not, exit pro
+        // nothinbg to do
+      }
+      else {
+        g_critical("remove files of backup dir fail!,ptr_dirent->d_name is %s, err: %s\n", ptr_dirent->d_name, strerror(errno));
+        exit(EXIT_FAILURE); 
+      }
+      g_string_free(absFileName, TRUE);       // free GString struct
+      continue;
+    }
+    // if the backup dir is empty at first, or all files have been deleted, there is no one file in backup dir. 
+    else if (!ptr_dirent) { 
+      return;
+    }
+    // if filename is "." or "..", skip
+    else if (!strcmp(ptr_dirent->d_name, ".") || !strcmp(ptr_dirent->d_name, "..")) {
+      // nothing to do
+    }
+    // else {
+    //   return;  // if backup dir is empty, quite the function      
+    // }
+  }
 }

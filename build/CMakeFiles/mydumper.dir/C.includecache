@@ -149,6 +149,12 @@ set_verbose.h
 /data/github/mydumper_personal_learning/set_verbose.h
 locale.h
 /data/github/mydumper_personal_learning/locale.h
+stdbool.h
+-
+dirent.h
+-
+string.h
+-
 
 /data/github/mydumper_personal_learning/mydumper.h
 
