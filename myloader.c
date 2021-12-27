@@ -48,13 +48,14 @@
 #include "set_verbose.h"
 #include "locale.h"
 #include "server_detect.h"
+#include <stdbool.h>
 
 guint commit_count = 1000;
 gchar *input_directory = NULL;
 gchar *directory = NULL;
 gboolean overwrite_tables = FALSE;
 gboolean innodb_optimize_keys = FALSE;
-gboolean enable_binlog = FALSE;
+gboolean disable_binlog = false;
 gboolean disable_redo_log = FALSE;
 guint rows = 0;
 gchar *source_db = NULL;
@@ -113,8 +114,8 @@ static GOptionEntry entries[] = {
      "An alternative database to restore into", NULL},
     {"source-db", 's', 0, G_OPTION_ARG_STRING, &source_db,
      "Database to restore", NULL},
-    {"enable-binlog", 'e', 0, G_OPTION_ARG_NONE, &enable_binlog,
-     "Enable binary logging of the restore data", NULL},
+    {"disable-binlog", 'e', 0, G_OPTION_ARG_NONE, &disable_binlog,
+     "Disable binary logging of the restore data", NULL},
     {"innodb-optimize-keys", 0, 0, G_OPTION_ARG_NONE, &innodb_optimize_keys,
      "Creates the table without the indexes and it adds them at the end", NULL},
     { "set-names",0, 0, G_OPTION_ARG_STRING, &set_names_str, 
@@ -323,7 +324,7 @@ GHashTable * initialize_hash_of_session_variables(){
     g_hash_table_insert(set_session_hash,g_strdup("WAIT_TIMEOUT"),g_strdup("2147483"));
     g_hash_table_insert(set_session_hash,g_strdup("NET_WRITE_TIMEOUT"),g_strdup("2147483"));
   }
-  if (!enable_binlog)
+  if (disable_binlog)
     g_hash_table_insert(set_session_hash,g_strdup("SQL_LOG_BIN"),g_strdup("0"));
   if (commit_count > 1)
     g_hash_table_insert(set_session_hash,g_strdup("AUTOCOMMIT"),g_strdup("0"));
