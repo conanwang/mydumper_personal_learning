@@ -15,6 +15,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../cmake/modules/FindMySQL.cmake"
   "../cmake/modules/FindPCRE.cmake"
   "../cmake/modules/FindSphinx.cmake"
+  "../cmake/modules/FindZSTD.cmake"
   "../config.h.in"
   "../docs/CMakeLists.txt"
   "/usr/share/cmake/Modules/CMakeCCompiler.cmake.in"

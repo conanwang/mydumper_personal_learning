@@ -62,10 +62,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /data/github/mydumper_personal_learning
+CMAKE_SOURCE_DIR = /data/github/mydumper_offical
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /data/github/mydumper_personal_learning/build
+CMAKE_BINARY_DIR = /data/github/mydumper_offical/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/mydumper.dir/depend.make
@@ -78,107 +78,172 @@ include CMakeFiles/mydumper.dir/flags.make
 
 CMakeFiles/mydumper.dir/mydumper.c.o: CMakeFiles/mydumper.dir/flags.make
 CMakeFiles/mydumper.dir/mydumper.c.o: ../mydumper.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/github/mydumper_personal_learning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/mydumper.dir/mydumper.c.o"
-	ccache gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mydumper.dir/mydumper.c.o -c /data/github/mydumper_personal_learning/mydumper.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/github/mydumper_offical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/mydumper.dir/mydumper.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mydumper.dir/mydumper.c.o -c /data/github/mydumper_offical/mydumper.c
 
 CMakeFiles/mydumper.dir/mydumper.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mydumper.dir/mydumper.c.i"
-	ccache gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /data/github/mydumper_personal_learning/mydumper.c > CMakeFiles/mydumper.dir/mydumper.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /data/github/mydumper_offical/mydumper.c > CMakeFiles/mydumper.dir/mydumper.c.i
 
 CMakeFiles/mydumper.dir/mydumper.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mydumper.dir/mydumper.c.s"
-	ccache gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /data/github/mydumper_personal_learning/mydumper.c -o CMakeFiles/mydumper.dir/mydumper.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /data/github/mydumper_offical/mydumper.c -o CMakeFiles/mydumper.dir/mydumper.c.s
 
 CMakeFiles/mydumper.dir/server_detect.c.o: CMakeFiles/mydumper.dir/flags.make
 CMakeFiles/mydumper.dir/server_detect.c.o: ../server_detect.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/github/mydumper_personal_learning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/mydumper.dir/server_detect.c.o"
-	ccache gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mydumper.dir/server_detect.c.o -c /data/github/mydumper_personal_learning/server_detect.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/github/mydumper_offical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/mydumper.dir/server_detect.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mydumper.dir/server_detect.c.o -c /data/github/mydumper_offical/server_detect.c
 
 CMakeFiles/mydumper.dir/server_detect.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mydumper.dir/server_detect.c.i"
-	ccache gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /data/github/mydumper_personal_learning/server_detect.c > CMakeFiles/mydumper.dir/server_detect.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /data/github/mydumper_offical/server_detect.c > CMakeFiles/mydumper.dir/server_detect.c.i
 
 CMakeFiles/mydumper.dir/server_detect.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mydumper.dir/server_detect.c.s"
-	ccache gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /data/github/mydumper_personal_learning/server_detect.c -o CMakeFiles/mydumper.dir/server_detect.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /data/github/mydumper_offical/server_detect.c -o CMakeFiles/mydumper.dir/server_detect.c.s
 
 CMakeFiles/mydumper.dir/g_unix_signal.c.o: CMakeFiles/mydumper.dir/flags.make
 CMakeFiles/mydumper.dir/g_unix_signal.c.o: ../g_unix_signal.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/github/mydumper_personal_learning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/mydumper.dir/g_unix_signal.c.o"
-	ccache gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mydumper.dir/g_unix_signal.c.o -c /data/github/mydumper_personal_learning/g_unix_signal.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/github/mydumper_offical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/mydumper.dir/g_unix_signal.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mydumper.dir/g_unix_signal.c.o -c /data/github/mydumper_offical/g_unix_signal.c
 
 CMakeFiles/mydumper.dir/g_unix_signal.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mydumper.dir/g_unix_signal.c.i"
-	ccache gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /data/github/mydumper_personal_learning/g_unix_signal.c > CMakeFiles/mydumper.dir/g_unix_signal.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /data/github/mydumper_offical/g_unix_signal.c > CMakeFiles/mydumper.dir/g_unix_signal.c.i
 
 CMakeFiles/mydumper.dir/g_unix_signal.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mydumper.dir/g_unix_signal.c.s"
-	ccache gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /data/github/mydumper_personal_learning/g_unix_signal.c -o CMakeFiles/mydumper.dir/g_unix_signal.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /data/github/mydumper_offical/g_unix_signal.c -o CMakeFiles/mydumper.dir/g_unix_signal.c.s
 
 CMakeFiles/mydumper.dir/connection.c.o: CMakeFiles/mydumper.dir/flags.make
 CMakeFiles/mydumper.dir/connection.c.o: ../connection.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/github/mydumper_personal_learning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/mydumper.dir/connection.c.o"
-	ccache gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mydumper.dir/connection.c.o -c /data/github/mydumper_personal_learning/connection.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/github/mydumper_offical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/mydumper.dir/connection.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mydumper.dir/connection.c.o -c /data/github/mydumper_offical/connection.c
 
 CMakeFiles/mydumper.dir/connection.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mydumper.dir/connection.c.i"
-	ccache gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /data/github/mydumper_personal_learning/connection.c > CMakeFiles/mydumper.dir/connection.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /data/github/mydumper_offical/connection.c > CMakeFiles/mydumper.dir/connection.c.i
 
 CMakeFiles/mydumper.dir/connection.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mydumper.dir/connection.c.s"
-	ccache gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /data/github/mydumper_personal_learning/connection.c -o CMakeFiles/mydumper.dir/connection.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /data/github/mydumper_offical/connection.c -o CMakeFiles/mydumper.dir/connection.c.s
 
 CMakeFiles/mydumper.dir/getPassword.c.o: CMakeFiles/mydumper.dir/flags.make
 CMakeFiles/mydumper.dir/getPassword.c.o: ../getPassword.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/github/mydumper_personal_learning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/mydumper.dir/getPassword.c.o"
-	ccache gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mydumper.dir/getPassword.c.o -c /data/github/mydumper_personal_learning/getPassword.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/github/mydumper_offical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/mydumper.dir/getPassword.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mydumper.dir/getPassword.c.o -c /data/github/mydumper_offical/getPassword.c
 
 CMakeFiles/mydumper.dir/getPassword.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mydumper.dir/getPassword.c.i"
-	ccache gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /data/github/mydumper_personal_learning/getPassword.c > CMakeFiles/mydumper.dir/getPassword.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /data/github/mydumper_offical/getPassword.c > CMakeFiles/mydumper.dir/getPassword.c.i
 
 CMakeFiles/mydumper.dir/getPassword.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mydumper.dir/getPassword.c.s"
-	ccache gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /data/github/mydumper_personal_learning/getPassword.c -o CMakeFiles/mydumper.dir/getPassword.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /data/github/mydumper_offical/getPassword.c -o CMakeFiles/mydumper.dir/getPassword.c.s
 
 CMakeFiles/mydumper.dir/logging.c.o: CMakeFiles/mydumper.dir/flags.make
 CMakeFiles/mydumper.dir/logging.c.o: ../logging.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/github/mydumper_personal_learning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/mydumper.dir/logging.c.o"
-	ccache gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mydumper.dir/logging.c.o -c /data/github/mydumper_personal_learning/logging.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/github/mydumper_offical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/mydumper.dir/logging.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mydumper.dir/logging.c.o -c /data/github/mydumper_offical/logging.c
 
 CMakeFiles/mydumper.dir/logging.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mydumper.dir/logging.c.i"
-	ccache gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /data/github/mydumper_personal_learning/logging.c > CMakeFiles/mydumper.dir/logging.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /data/github/mydumper_offical/logging.c > CMakeFiles/mydumper.dir/logging.c.i
 
 CMakeFiles/mydumper.dir/logging.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mydumper.dir/logging.c.s"
-	ccache gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /data/github/mydumper_personal_learning/logging.c -o CMakeFiles/mydumper.dir/logging.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /data/github/mydumper_offical/logging.c -o CMakeFiles/mydumper.dir/logging.c.s
 
 CMakeFiles/mydumper.dir/set_verbose.c.o: CMakeFiles/mydumper.dir/flags.make
 CMakeFiles/mydumper.dir/set_verbose.c.o: ../set_verbose.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/github/mydumper_personal_learning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/mydumper.dir/set_verbose.c.o"
-	ccache gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mydumper.dir/set_verbose.c.o -c /data/github/mydumper_personal_learning/set_verbose.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/github/mydumper_offical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/mydumper.dir/set_verbose.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mydumper.dir/set_verbose.c.o -c /data/github/mydumper_offical/set_verbose.c
 
 CMakeFiles/mydumper.dir/set_verbose.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mydumper.dir/set_verbose.c.i"
-	ccache gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /data/github/mydumper_personal_learning/set_verbose.c > CMakeFiles/mydumper.dir/set_verbose.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /data/github/mydumper_offical/set_verbose.c > CMakeFiles/mydumper.dir/set_verbose.c.i
 
 CMakeFiles/mydumper.dir/set_verbose.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mydumper.dir/set_verbose.c.s"
-	ccache gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /data/github/mydumper_personal_learning/set_verbose.c -o CMakeFiles/mydumper.dir/set_verbose.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /data/github/mydumper_offical/set_verbose.c -o CMakeFiles/mydumper.dir/set_verbose.c.s
 
 CMakeFiles/mydumper.dir/common.c.o: CMakeFiles/mydumper.dir/flags.make
 CMakeFiles/mydumper.dir/common.c.o: ../common.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/github/mydumper_personal_learning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/mydumper.dir/common.c.o"
-	ccache gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mydumper.dir/common.c.o -c /data/github/mydumper_personal_learning/common.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/github/mydumper_offical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/mydumper.dir/common.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mydumper.dir/common.c.o -c /data/github/mydumper_offical/common.c
 
 CMakeFiles/mydumper.dir/common.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mydumper.dir/common.c.i"
-	ccache gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /data/github/mydumper_personal_learning/common.c > CMakeFiles/mydumper.dir/common.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /data/github/mydumper_offical/common.c > CMakeFiles/mydumper.dir/common.c.i
 
 CMakeFiles/mydumper.dir/common.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mydumper.dir/common.c.s"
-	ccache gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /data/github/mydumper_personal_learning/common.c -o CMakeFiles/mydumper.dir/common.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /data/github/mydumper_offical/common.c -o CMakeFiles/mydumper.dir/common.c.s
+
+CMakeFiles/mydumper.dir/zstd/zstd_zlibwrapper.c.o: CMakeFiles/mydumper.dir/flags.make
+CMakeFiles/mydumper.dir/zstd/zstd_zlibwrapper.c.o: ../zstd/zstd_zlibwrapper.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/github/mydumper_offical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/mydumper.dir/zstd/zstd_zlibwrapper.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mydumper.dir/zstd/zstd_zlibwrapper.c.o -c /data/github/mydumper_offical/zstd/zstd_zlibwrapper.c
+
+CMakeFiles/mydumper.dir/zstd/zstd_zlibwrapper.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mydumper.dir/zstd/zstd_zlibwrapper.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /data/github/mydumper_offical/zstd/zstd_zlibwrapper.c > CMakeFiles/mydumper.dir/zstd/zstd_zlibwrapper.c.i
+
+CMakeFiles/mydumper.dir/zstd/zstd_zlibwrapper.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mydumper.dir/zstd/zstd_zlibwrapper.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /data/github/mydumper_offical/zstd/zstd_zlibwrapper.c -o CMakeFiles/mydumper.dir/zstd/zstd_zlibwrapper.c.s
+
+CMakeFiles/mydumper.dir/zstd/gzclose.c.o: CMakeFiles/mydumper.dir/flags.make
+CMakeFiles/mydumper.dir/zstd/gzclose.c.o: ../zstd/gzclose.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/github/mydumper_offical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/mydumper.dir/zstd/gzclose.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mydumper.dir/zstd/gzclose.c.o -c /data/github/mydumper_offical/zstd/gzclose.c
+
+CMakeFiles/mydumper.dir/zstd/gzclose.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mydumper.dir/zstd/gzclose.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /data/github/mydumper_offical/zstd/gzclose.c > CMakeFiles/mydumper.dir/zstd/gzclose.c.i
+
+CMakeFiles/mydumper.dir/zstd/gzclose.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mydumper.dir/zstd/gzclose.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /data/github/mydumper_offical/zstd/gzclose.c -o CMakeFiles/mydumper.dir/zstd/gzclose.c.s
+
+CMakeFiles/mydumper.dir/zstd/gzlib.c.o: CMakeFiles/mydumper.dir/flags.make
+CMakeFiles/mydumper.dir/zstd/gzlib.c.o: ../zstd/gzlib.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/github/mydumper_offical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/mydumper.dir/zstd/gzlib.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mydumper.dir/zstd/gzlib.c.o -c /data/github/mydumper_offical/zstd/gzlib.c
+
+CMakeFiles/mydumper.dir/zstd/gzlib.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mydumper.dir/zstd/gzlib.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /data/github/mydumper_offical/zstd/gzlib.c > CMakeFiles/mydumper.dir/zstd/gzlib.c.i
+
+CMakeFiles/mydumper.dir/zstd/gzlib.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mydumper.dir/zstd/gzlib.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /data/github/mydumper_offical/zstd/gzlib.c -o CMakeFiles/mydumper.dir/zstd/gzlib.c.s
+
+CMakeFiles/mydumper.dir/zstd/gzread.c.o: CMakeFiles/mydumper.dir/flags.make
+CMakeFiles/mydumper.dir/zstd/gzread.c.o: ../zstd/gzread.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/github/mydumper_offical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/mydumper.dir/zstd/gzread.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mydumper.dir/zstd/gzread.c.o -c /data/github/mydumper_offical/zstd/gzread.c
+
+CMakeFiles/mydumper.dir/zstd/gzread.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mydumper.dir/zstd/gzread.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /data/github/mydumper_offical/zstd/gzread.c > CMakeFiles/mydumper.dir/zstd/gzread.c.i
+
+CMakeFiles/mydumper.dir/zstd/gzread.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mydumper.dir/zstd/gzread.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /data/github/mydumper_offical/zstd/gzread.c -o CMakeFiles/mydumper.dir/zstd/gzread.c.s
+
+CMakeFiles/mydumper.dir/zstd/gzwrite.c.o: CMakeFiles/mydumper.dir/flags.make
+CMakeFiles/mydumper.dir/zstd/gzwrite.c.o: ../zstd/gzwrite.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/github/mydumper_offical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/mydumper.dir/zstd/gzwrite.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mydumper.dir/zstd/gzwrite.c.o -c /data/github/mydumper_offical/zstd/gzwrite.c
+
+CMakeFiles/mydumper.dir/zstd/gzwrite.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mydumper.dir/zstd/gzwrite.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /data/github/mydumper_offical/zstd/gzwrite.c > CMakeFiles/mydumper.dir/zstd/gzwrite.c.i
+
+CMakeFiles/mydumper.dir/zstd/gzwrite.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mydumper.dir/zstd/gzwrite.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /data/github/mydumper_offical/zstd/gzwrite.c -o CMakeFiles/mydumper.dir/zstd/gzwrite.c.s
 
 # Object files for target mydumper
 mydumper_OBJECTS = \
@@ -189,7 +254,12 @@ mydumper_OBJECTS = \
 "CMakeFiles/mydumper.dir/getPassword.c.o" \
 "CMakeFiles/mydumper.dir/logging.c.o" \
 "CMakeFiles/mydumper.dir/set_verbose.c.o" \
-"CMakeFiles/mydumper.dir/common.c.o"
+"CMakeFiles/mydumper.dir/common.c.o" \
+"CMakeFiles/mydumper.dir/zstd/zstd_zlibwrapper.c.o" \
+"CMakeFiles/mydumper.dir/zstd/gzclose.c.o" \
+"CMakeFiles/mydumper.dir/zstd/gzlib.c.o" \
+"CMakeFiles/mydumper.dir/zstd/gzread.c.o" \
+"CMakeFiles/mydumper.dir/zstd/gzwrite.c.o"
 
 # External object files for target mydumper
 mydumper_EXTERNAL_OBJECTS =
@@ -202,13 +272,17 @@ mydumper: CMakeFiles/mydumper.dir/getPassword.c.o
 mydumper: CMakeFiles/mydumper.dir/logging.c.o
 mydumper: CMakeFiles/mydumper.dir/set_verbose.c.o
 mydumper: CMakeFiles/mydumper.dir/common.c.o
+mydumper: CMakeFiles/mydumper.dir/zstd/zstd_zlibwrapper.c.o
+mydumper: CMakeFiles/mydumper.dir/zstd/gzclose.c.o
+mydumper: CMakeFiles/mydumper.dir/zstd/gzlib.c.o
+mydumper: CMakeFiles/mydumper.dir/zstd/gzread.c.o
+mydumper: CMakeFiles/mydumper.dir/zstd/gzwrite.c.o
 mydumper: CMakeFiles/mydumper.dir/build.make
-mydumper: /usr/lib64/libcrypto.a
 mydumper: /usr/lib64/mysql/libmysqlclient.so
 mydumper: /usr/lib64/libpthread.so
 mydumper: /usr/lib64/libdl.so
 mydumper: /usr/lib64/libssl.so
-mydumper: /usr/lib64/libcrypto.a
+mydumper: /usr/lib64/libcrypto.so
 mydumper: /usr/lib64/libresolv.so
 mydumper: /usr/lib64/libm.so
 mydumper: /usr/lib64/librt.so
@@ -218,21 +292,9 @@ mydumper: /usr/lib64/libgio-2.0.so
 mydumper: /usr/lib64/libgobject-2.0.so
 mydumper: /usr/lib64/libpcre.so
 mydumper: /usr/lib64/libz.so
-mydumper: /usr/lib64/mysql/libmysqlclient.so
-mydumper: /usr/lib64/libpthread.so
-mydumper: /usr/lib64/libdl.so
-mydumper: /usr/lib64/libssl.so
-mydumper: /usr/lib64/libresolv.so
-mydumper: /usr/lib64/libm.so
-mydumper: /usr/lib64/librt.so
-mydumper: /usr/lib64/libglib-2.0.so
-mydumper: /usr/lib64/libgthread-2.0.so
-mydumper: /usr/lib64/libgio-2.0.so
-mydumper: /usr/lib64/libgobject-2.0.so
-mydumper: /usr/lib64/libpcre.so
-mydumper: /usr/lib64/libz.so
+mydumper: /usr/lib64/libzstd.so
 mydumper: CMakeFiles/mydumper.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/data/github/mydumper_personal_learning/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C executable mydumper"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/data/github/mydumper_offical/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking C executable mydumper"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mydumper.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -245,6 +307,6 @@ CMakeFiles/mydumper.dir/clean:
 .PHONY : CMakeFiles/mydumper.dir/clean
 
 CMakeFiles/mydumper.dir/depend:
-	cd /data/github/mydumper_personal_learning/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /data/github/mydumper_personal_learning /data/github/mydumper_personal_learning /data/github/mydumper_personal_learning/build /data/github/mydumper_personal_learning/build /data/github/mydumper_personal_learning/build/CMakeFiles/mydumper.dir/DependInfo.cmake --color=$(COLOR)
+	cd /data/github/mydumper_offical/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /data/github/mydumper_offical /data/github/mydumper_offical /data/github/mydumper_offical/build /data/github/mydumper_offical/build /data/github/mydumper_offical/build/CMakeFiles/mydumper.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/mydumper.dir/depend
 
